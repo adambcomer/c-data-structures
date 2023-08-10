@@ -17,6 +17,8 @@
 #ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 
+#include <stddef.h>
+
 struct LinkedListNode
 {
   struct LinkedListNode* next;
@@ -32,7 +34,7 @@ LinkedListNode_free(struct LinkedListNode* node);
 struct LinkedList
 {
   struct LinkedListNode* node;
-  unsigned int length;
+  size_t length;
 };
 
 struct LinkedList*
@@ -42,7 +44,7 @@ void
 LinkedList_free(struct LinkedList* ll);
 
 struct LinkedListNode*
-LinkedList_get(struct LinkedList* ll, unsigned int idx);
+LinkedList_get(struct LinkedList* ll, size_t idx);
 
 struct LinkedListNode*
 LinkedList_first(struct LinkedList* ll);
@@ -56,13 +58,13 @@ LinkedList_append(struct LinkedList* ll, struct LinkedListNode* node);
 void
 LinkedList_insert(struct LinkedList* ll,
                   struct LinkedListNode* node,
-                  unsigned int idx);
+                  size_t idx);
 
 struct LinkedList*
 LinkedList_concatenate(struct LinkedList* ll_a, struct LinkedList* ll_b);
 
 struct LinkedListNode*
-LinkedList_remove(struct LinkedList* ll, unsigned int idx);
+LinkedList_remove(struct LinkedList* ll, size_t idx);
 
 struct LinkedListNode*
 LinkedList_pop(struct LinkedList* ll);

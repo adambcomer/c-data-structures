@@ -56,7 +56,7 @@ LinkedListNode_free(struct LinkedListNode* node)
 }
 
 struct LinkedListNode*
-LinkedList_get(struct LinkedList* ll, unsigned int idx)
+LinkedList_get(struct LinkedList* ll, size_t idx)
 {
   if (ll->length <= idx) {
     return NULL;
@@ -112,7 +112,7 @@ LinkedList_append(struct LinkedList* ll, struct LinkedListNode* node)
 void
 LinkedList_insert(struct LinkedList* ll,
                   struct LinkedListNode* node,
-                  unsigned int idx)
+                  size_t idx)
 {
   if (idx == 0) {
     node->next = ll->node;
@@ -150,7 +150,7 @@ LinkedList_concatenate(struct LinkedList* ll_a, struct LinkedList* ll_b)
 }
 
 struct LinkedListNode*
-LinkedList_remove(struct LinkedList* ll, unsigned int idx)
+LinkedList_remove(struct LinkedList* ll, size_t idx)
 {
   if (ll->length <= idx) {
     return NULL;
