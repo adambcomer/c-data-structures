@@ -15,11 +15,10 @@
  */
 
 #define MUNIT_ENABLE_ASSERT_ALIASES
-#include "../include/linked_list.h"
 
+#include "include/linked_list.h"
+#include "subprojects/munit/munit.h"
 #include <stdlib.h>
-
-#include "../munit/munit.h"
 
 static MunitResult
 test_LinkedList_new()
@@ -257,10 +256,6 @@ test_LinkedListNode_get()
   struct LinkedListNode* get_node_3 = LinkedList_get(ll, 2);
 
   munit_assert_ptr(get_node_3, ==, new_node_3);
-
-  struct LinkedListNode* get_node_4 = LinkedList_get(ll, 3);
-
-  munit_assert_ptr(get_node_4, ==, NULL);
 
   LinkedList_free(ll);
 

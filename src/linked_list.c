@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-#include "../include/linked_list.h"
+#include "include/linked_list.h"
+#include <assert.h>
 #include <stdlib.h>
 
 struct LinkedList*
@@ -58,9 +59,7 @@ LinkedListNode_free(struct LinkedListNode* node)
 struct LinkedListNode*
 LinkedList_get(struct LinkedList* ll, size_t idx)
 {
-  if (ll->length <= idx) {
-    return NULL;
-  }
+  assert(idx < ll->length);
 
   struct LinkedListNode* curr = ll->node;
   while (curr != NULL) {
@@ -114,6 +113,8 @@ LinkedList_insert(struct LinkedList* ll,
                   struct LinkedListNode* node,
                   size_t idx)
 {
+  assert(idx <= ll->length);
+
   if (idx == 0) {
     node->next = ll->node;
     ll->node = node;
@@ -122,8 +123,6 @@ LinkedList_insert(struct LinkedList* ll,
   }
 
   struct LinkedListNode* preceding_node = LinkedList_get(ll, idx - 1);
-  if (preceding_node == NULL)
-    return;
 
   node->next = preceding_node->next;
   preceding_node->next = node;
@@ -152,9 +151,7 @@ LinkedList_concatenate(struct LinkedList* ll_a, struct LinkedList* ll_b)
 struct LinkedListNode*
 LinkedList_remove(struct LinkedList* ll, size_t idx)
 {
-  if (ll->length <= idx) {
-    return NULL;
-  }
+  assert(idx < ll->length);
 
   if (idx == 0) {
     struct LinkedListNode* node = ll->node;
