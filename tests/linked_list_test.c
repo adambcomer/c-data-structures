@@ -47,7 +47,7 @@ test_LinkedListNode_new()
 }
 
 static MunitResult
-test_LinkedListNode_append()
+test_LinkedList_append()
 {
   struct LinkedList* ll = LinkedList_new();
 
@@ -96,7 +96,7 @@ test_LinkedListNode_append()
 }
 
 static MunitResult
-test_LinkedListNode_insert()
+test_LinkedList_insert()
 {
   struct LinkedList* ll = LinkedList_new();
 
@@ -167,7 +167,7 @@ test_LinkedListNode_insert()
 }
 
 static MunitResult
-test_LinkedListNode_first()
+test_LinkedList_first()
 {
   struct LinkedList* ll = LinkedList_new();
 
@@ -198,7 +198,7 @@ test_LinkedListNode_first()
 }
 
 static MunitResult
-test_LinkedListNode_last()
+test_LinkedList_last()
 {
   struct LinkedList* ll = LinkedList_new();
 
@@ -229,7 +229,7 @@ test_LinkedListNode_last()
 }
 
 static MunitResult
-test_LinkedListNode_get()
+test_LinkedList_get()
 {
   struct LinkedList* ll = LinkedList_new();
 
@@ -263,7 +263,7 @@ test_LinkedListNode_get()
 }
 
 static MunitResult
-test_LinkedListNode_concatenate()
+test_LinkedList_concatenate()
 {
   struct LinkedList* ll_1 = LinkedList_new();
 
@@ -316,7 +316,7 @@ test_LinkedListNode_concatenate()
 }
 
 static MunitResult
-test_LinkedListNode_remove()
+test_LinkedList_remove()
 {
   struct LinkedList* ll = LinkedList_new();
 
@@ -373,7 +373,7 @@ test_LinkedListNode_remove()
 }
 
 static MunitResult
-test_LinkedListNode_pop()
+test_LinkedList_pop()
 {
   struct LinkedList* ll = LinkedList_new();
 
@@ -427,7 +427,7 @@ test_LinkedListNode_pop()
 }
 
 static MunitResult
-test_LinkedListNode_iterator()
+test_LinkedList_iterator()
 {
   struct LinkedList* ll = LinkedList_new();
 
@@ -470,15 +470,15 @@ test_LinkedListNode_iterator()
 static MunitTest test_suite_tests[] = {
   {"/new", test_LinkedList_new, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
   {"/node_new", test_LinkedListNode_new, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/append", test_LinkedListNode_append, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/insert", test_LinkedListNode_insert, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/first", test_LinkedListNode_first, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/last", test_LinkedListNode_last, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/get", test_LinkedListNode_get, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/concatenate", test_LinkedListNode_concatenate, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/remove", test_LinkedListNode_remove, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/pop", test_LinkedListNode_pop, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
-  {"/iterator", test_LinkedListNode_iterator, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/append", test_LinkedList_append, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/insert", test_LinkedList_insert, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/first", test_LinkedList_first, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/last", test_LinkedList_last, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/get", test_LinkedList_get, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/concatenate", test_LinkedList_concatenate, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/remove", test_LinkedList_remove, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/pop", test_LinkedList_pop, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
+  {"/iterator", test_LinkedList_iterator, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL},
   {NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL}
 };
 
