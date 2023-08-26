@@ -24,3 +24,4 @@ meson test -v -C build
 
 - [Linked List](https://github.com/adambcomer/c-data-structures/blob/main/src/linked_list.c)
 - [Vector](https://github.com/adambcomer/c-data-structures/blob/main/src/vector.c)
+- [Hash](https://github.com/adambcomer/c-data-structures/blob/main/src/hash.c)
