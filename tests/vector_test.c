@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-#include <stdio.h>
 #define MUNIT_ENABLE_ASSERT_ALIASES
 
-#include "include/vector.h"
-#include "subprojects/munit/munit.h"
+#include "munit.h"
+#include "vector.h"
 
 static MunitResult
 test_Vector_new()

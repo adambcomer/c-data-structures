@@ -16,9 +16,8 @@
 
 #define MUNIT_ENABLE_ASSERT_ALIASES
 
-#include "include/linked_list.h"
-#include "subprojects/munit/munit.h"
-#include <stdlib.h>
+#include "linked_list.h"
+#include "munit.h"
 
 static MunitResult
 test_LinkedList_new()

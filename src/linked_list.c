@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "include/linked_list.h"
+#include "linked_list.h"
 #include <assert.h>
 #include <stdlib.h>
 
