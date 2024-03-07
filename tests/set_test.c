@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#include "hash.h"
-#include <stddef.h>
-#include <string.h>
 #define MUNIT_ENABLE_ASSERT_ALIASES
 
+#include "hash.h"
 #include "munit.h"
 #include "set.h"
+#include <stddef.h>
+#include <string.h>
 
 static MunitResult
 test_Set_new()
