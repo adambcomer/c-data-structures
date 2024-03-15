@@ -26,3 +26,4 @@ meson test -v -C build
 - [Vector](https://github.com/adambcomer/c-data-structures/blob/main/src/vector.c)
 - [Hash](https://github.com/adambcomer/c-data-structures/blob/main/src/hash.c)
 - [Set](https://github.com/adambcomer/c-data-structures/blob/main/src/set.c)
+- [Sort](https://github.com/adambcomer/c-data-structures/blob/main/src/sort.c)
